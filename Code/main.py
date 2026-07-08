@@ -17,7 +17,7 @@ old_time = ''
 while run:
      
     with open('menu.txt', 'r') as menu_file:
-        menu = menu_file.readlines()
+        menu = [line.strip() for line in menu_file.readlines()]
 
         if 'cheat = true' in menu:
             cheat = True
